@@ -1,0 +1,24 @@
+---
+ip: "192.168.10.10"
+memory: 1542
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+  - ~/.ssh/id_rsa
+
+folders:
+  - map: D:\projects\thatiq
+    to: /home/vagrant/thatiq
+
+docker-compose: /home/vagrant/thatiq/docker-compose.yaml
+
+networks:
+  - type: "private_network"
+    ip: "192.168.10.20"
+
+ports:
+  - send: 3000
+    to: 3000
