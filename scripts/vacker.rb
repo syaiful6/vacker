@@ -22,7 +22,7 @@ class Vacker
       config.vm.network :private_network, :ip => "0.0.0.0", :auto_network => true
     end
 
-    if settings.has_key?("network")
+    if settings.has_key?("networks")
       settings["networks"].each do |net|
         config.vm.network net["type"], ip: net["ip"], bridge: net["bridge"] ||= nil, netmask: net["netmask"] ||= "255.255.255.0"
       end

@@ -10,10 +10,10 @@ keys:
   - ~/.ssh/id_rsa
 
 folders:
-  - map: D:\projects\thatiq
-    to: /home/vagrant/thatiq
+  - map: ~/code
+    to: /home/vagrant/code
 
-docker-compose: /home/vagrant/thatiq/docker-compose.yaml
+docker-compose: /home/vagrant/code/docker-compose.yaml
 
 networks:
   - type: "private_network"
